@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registro de Animais
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-list *ngFor="let animal of lista;">
+    <ion-item (click)="editar(animal)">
+      <ion-label>{{animal.nome}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button color="warning" (click)="irParaRegistro()">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
