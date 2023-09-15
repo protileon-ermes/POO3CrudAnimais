@@ -25,10 +25,10 @@ export class HomePage {
   }
 
   irParaRegistro(){
-    this.router.navigate(["/registro"]);
+    this.router.navigate(["/registrar"]);
   }
-  irParaEditar(){
-    this.router.navigateByUrl("/detalhar",{
-      state: {animal: Animais}});
+  irParaEditar(animal : Animais){
+    this.router.navigateByUrl("/editar",{
+      state: {animal: animal}});
   }
 }

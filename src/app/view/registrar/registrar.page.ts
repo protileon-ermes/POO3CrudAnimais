@@ -27,19 +27,19 @@ export class RegistrarPage implements OnInit {
     }else{
       this.presentAlert("Sucesso", "Animal registrado");
       let novo: Animais = new Animais(this.especie, this.nome, this.genero);
-      novo.pesoAnimal = this.peso;
-      novo.saudeAnimal= this.saude;
+      novo.peso = this.peso;
+      novo.saude= this.saude;
       this.firebase.create(novo);
       this.router.navigate(["/home"]);
     }
   }
 
-  async presentAlert(subHeader: string, message: string) {
+  async presentAlert(subHeader: string, message: string){
     const alert = await this.alertController.create({
-      header: 'Registro de Animais',
+      header: 'registro de animais',
       subHeader: subHeader,
       message: message,
-      buttons: ['OK'],
+      buttons: ['Ok']
     });
     await alert.present();
   }

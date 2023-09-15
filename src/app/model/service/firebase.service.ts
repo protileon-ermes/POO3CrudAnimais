@@ -18,22 +18,22 @@ export class FirebaseService {
     create(animal: Animais){
         return this.firestore
         .collection(this.PATH).add({
-            especie: animal.especieAnimal,
-            nome: animal.nomeAnimal,
-            genero: animal.generoAnimal,
-            peso: animal.pesoAnimal,
-            saude: animal.saudeAnimal
+            especie: animal.especie,
+            nome: animal.nome,
+            genero: animal.genero,
+            peso: animal.peso,
+            saude: animal.saude
         });
     }
 
     update(animal: Animais, id: string){
         return this.firestore
         .collection(this.PATH).doc(id).update({
-            especie: animal.especieAnimal,
-            nome: animal.nomeAnimal,
-            genero: animal.generoAnimal,
-            peso: animal.pesoAnimal,
-            saude: animal.saudeAnimal
+            especie: animal.especie,
+            nome: animal.nome,
+            genero: animal.genero,
+            peso: animal.peso,
+            saude: animal.saude
         });
     }
 

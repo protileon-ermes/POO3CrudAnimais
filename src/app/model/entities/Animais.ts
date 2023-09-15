@@ -1,15 +1,15 @@
 export class Animais{
     private _id!: string;
-    private _especieAnimal: string;
-    private _nomeAnimal: string;
-    private _generoAnimal: number;
-    private _pesoAnimal!: number;
-    private _saudeAnimal!: number;
+    private _especie: string;
+    private _nome: string;
+    private _genero: number;
+    private _peso!: number;
+    private _saude!: number;
 
     constructor(especie:string,nome:string,genero:number){
-        this._especieAnimal=especie;
-        this._generoAnimal=genero;
-        this._nomeAnimal=nome;
+        this._especie=especie;
+        this._genero=genero;
+        this._nome=nome;
     }
     public get id(): string {
         return this._id;
@@ -17,35 +17,35 @@ export class Animais{
     public set id(value: string) {
         this._id = value;
     }
-    public get especieAnimal(): string {
-        return this._especieAnimal;
+    public get especie(): string {
+        return this._especie;
     }
-    public set especieAnimal(value: string) {
-        this._especieAnimal = value;
+    public set especie(value: string) {
+        this._especie = value;
     }
-    public get nomeAnimal(): string {
-        return this._nomeAnimal;
+    public get nome(): string {
+        return this._nome;
     }
-    public set nomeAnimal(value: string) {
-        this._nomeAnimal = value;
+    public set nome(value: string) {
+        this._nome = value;
     }
-    public get generoAnimal(): number {
-        return this._generoAnimal;
+    public get genero(): number {
+        return this._genero;
     }
-    public set generoAnimal(value: number) {
-        this._generoAnimal = value;
+    public set genero(value: number) {
+        this._genero = value;
     }
-    public get pesoAnimal(): number {
-        return this._pesoAnimal;
+    public get peso(): number {
+        return this._peso;
     }
-    public set pesoAnimal(value: number) {
-        this._pesoAnimal = value;
+    public set peso(value: number) {
+        this._peso = value;
     }
-    public get saudeAnimal(): number {
-        return this._saudeAnimal;
+    public get saude(): number {
+        return this._saude;
     }
-    public set saudeAnimal(value: number) {
-        this._saudeAnimal = value;
+    public set saude(value: number) {
+        this._saude = value;
     }
 }
 

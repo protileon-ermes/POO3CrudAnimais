@@ -21,11 +21,11 @@ export class EditarPage implements OnInit {
 
   ngOnInit() {
     this.animal=history.state.animal;
-    this.especie= this.animal.especieAnimal;
-    this.nome=this.animal.nomeAnimal;
-    this.genero=this.animal.generoAnimal;
-    this.peso=this.animal.pesoAnimal;
-    this.saude=this.animal.saudeAnimal;
+    this.especie= this.animal.especie;
+    this.nome=this.animal.nome;
+    this.genero=this.animal.genero;
+    this.peso=this.animal.peso;
+    this.saude=this.animal.saude;
   }
   PermitirEdicao(){
     if(this.edicao){
@@ -37,8 +37,8 @@ export class EditarPage implements OnInit {
 
   editar(){
     let novo : Animais = new Animais(this.especie, this.nome, this.genero);
-    novo.pesoAnimal=this.peso;
-    novo.saudeAnimal=this.peso;
+    novo.peso=this.peso;
+    novo.saude=this.peso;
     this.firebase.update(novo, this.animal.id);
     this.router.navigate(['/home']);
   }
